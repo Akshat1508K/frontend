@@ -19,6 +19,9 @@ export default function VideoMeetComponent() {
     const socketRef = useRef();
     const socketIdRef = useRef();
     const localVideoref = useRef();
+
+    const [, setVideoAvailable] = useState(true);
+    const [, setAudioAvailable] = useState(true);
     const [video, setVideo] = useState(true);
     const [audio, setAudio] = useState(true);
     const [messages, setMessages] = useState([]);
@@ -31,7 +34,6 @@ export default function VideoMeetComponent() {
     const [videoStatus, setVideoStatus] = useState({});
 
     useEffect(() => {
-        console.log("je")
         getPermissions();
     }, []);
 
