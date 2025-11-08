@@ -19,10 +19,6 @@ export default function VideoMeetComponent() {
     const socketRef = useRef();
     const socketIdRef = useRef();
     const localVideoref = useRef();
-    const videoRef = useRef([]);
-
-    const [videoAvailable, setVideoAvailable] = useState(true);
-    const [audioAvailable, setAudioAvailable] = useState(true);
     const [video, setVideo] = useState(true);
     const [audio, setAudio] = useState(true);
     const [messages, setMessages] = useState([]);
