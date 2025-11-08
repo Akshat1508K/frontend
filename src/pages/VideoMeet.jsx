@@ -9,7 +9,7 @@ import MicOffIcon from "@mui/icons-material/MicOff";
 import ChatIcon from "@mui/icons-material/Chat";
 import styles from "../styles/videoComponent.module.css";
 
-const server_url = "http://localhost:8000";
+const server_url = "https://backend-rh9i.vercel.app/";
 var connections = {};
 const peerConfigConnections = {
     iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
@@ -39,7 +39,7 @@ export default function VideoMeetComponent() {
         getPermissions();
     }, []);
 
-    
+
     useEffect(() => {
         // Attach stream to local video on every change
         if (localVideoref.current && window.localStream) {
